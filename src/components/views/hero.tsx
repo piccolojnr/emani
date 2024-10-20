@@ -1,12 +1,17 @@
+import { useState } from "react";
+import OrderModal from "../ordermodal";
+const data = {
+  title: "WE OFFER THE BEST LAUNDRY SERVICES",
+  description:
+    "The Laundry Company provides a premium laundry, ironing, dry cleaning, and alteration service for domestic and small businesses in the US.",
+  image: "/images/hero.jpg",
+};
 const Hero = () => {
-  const data = {
-    title: "WE OFFER THE BEST LAUNDRY SERVICES",
-    description:
-      "The Laundry Company provides a premium laundry, ironing, dry cleaning, and alteration service for domestic and small businesses in the US.",
-    image: "/images/hero.jpg",
-  };
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
+      <OrderModal closeModal={() => setShowModal(false)} open={showModal} />
       <div
         className="bg-cover bg-no-repeat bg-left-top py-12 text-white relative"
         style={{
@@ -23,12 +28,12 @@ const Hero = () => {
                 <p className="text-base font-thin">{data.description}</p>
               </div>
               <div className="mt-4">
-                <a
-                  href="#"
+                <button
+                  onClick={() => setShowModal(true)}
                   className="bg-blue-500 text-white font-bold py-2 px-4 "
                 >
                   ORDER NOW
-                </a>
+                </button>
               </div>
             </div>
             <div className="w-full sm:w-6/12">
