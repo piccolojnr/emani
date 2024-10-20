@@ -5,6 +5,7 @@ import Convenience from "../svgs/convenience";
 import Quality from "../svgs/quality";
 import ExpressDelivery from "../svgs/expressdelivery";
 import Instant from "../svgs/instant";
+import Link from "next/link";
 
 const data = [
   {
@@ -63,9 +64,9 @@ export default function WhyUs() {
               <div className="w-20 h-20">{item.icon}</div>
               <div className="w-9/12 pl-4">
                 <h3 className="text-xl font-thin">
-                  <a href="#" className="text-blue-500">
+                  <Link href="#" className="text-blue-500">
                     {item.title}
-                  </a>
+                  </Link>
                 </h3>
                 <p className="text-gray-700 mt-2 text-sm font-thin">
                   {item.description}

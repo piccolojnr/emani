@@ -1,6 +1,7 @@
 import LaundryWasher from "../svgs/laundrywasher";
 import LaundryDryer from "../svgs/laudryDryer";
 import LaundryCarpet from "../svgs/laundrycarpet";
+import Link from "next/link";
 
 const services = [
   {
@@ -40,20 +41,20 @@ const Services = () => {
                     {service.image}
                   </div>
                   <h3 className="text-2xl font-normal">
-                    <a href="#" className="text-blue-500">
+                    <Link href="#" className="text-blue-500">
                       {service.title}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="text-gray-700 my-4 text-sm font-thin">
                     {service.description}
                   </p>
                   <div className="mt-4">
-                    <a
-                      href="/more/"
+                    <Link
+                      href="#"
                       className="inline-block bg-blue-500 text-white py-2 px-6  font-semibold hover:bg-blue-600 transition duration-300"
                     >
                       READ MORE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -4,41 +4,41 @@ const Navbar = () => {
   const data = [
     {
       name: "HOME",
-      link: "/",
+      link: "#",
       active: true,
     },
     {
       name: "ABOUT US",
-      link: "/about-us/",
+      link: "#",
     },
     {
       name: "SERVICES",
-      link: "/services/",
+      link: "#",
     },
     {
       name: "PRICING",
-      link: "/pricing/",
+      link: "#",
     },
     {
       name: "GALLERY",
-      link: "/gallery/",
+      link: "#",
     },
     {
       name: "TESTIMONIALS",
-      link: "/testimonials/",
+      link: "#",
     },
     {
       name: "FAQ",
-      link: "/faq/",
+      link: "#",
     },
     {
       name: "CONTACTS",
-      link: "/contacts/",
+      link: "#",
     },
   ];
   return (
     <div className=" py-2">
-      <div className="container px-10 py-4">
+      <div className="container px- py-4">
         <ul className="flex justify-start space-x-6">
           {data.map((item, index) => (
             <li key={index}>
