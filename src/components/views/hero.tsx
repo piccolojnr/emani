@@ -3,7 +3,7 @@ import OrderModal from "../ordermodal";
 const data = {
   title: "WE OFFER THE BEST LAUNDRY SERVICES",
   description:
-    "The Laundry Company provides a premium laundry, ironing, dry cleaning, and alteration service for domestic and small businesses in the US.",
+    "The Laundry Company provides a premium laundry, ironing, dry cleaning, and alteration service for domestic and small businesses in Ghana",
   image: "/images/hero.jpg",
 };
 const Hero = () => {

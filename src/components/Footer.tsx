@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <footer className="bg-blue-400 text-white py-6">
@@ -5,9 +7,9 @@ const Footer = () => {
         <p>&copy; 2024 Laundry Service. All rights reserved.</p>
         <ul className="flex justify-center mt-4 space-x-4">
           <li>
-            <a href="#" className="hover:underline">
+            <Link href="#" className="hover:underline">
               Privacy Policy
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="hover:underline">
