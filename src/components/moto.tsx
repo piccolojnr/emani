@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import { FaClock, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 
 export default function Moto() {
   const data = {
@@ -8,78 +10,61 @@ export default function Moto() {
     phone: "(123) 456-7890",
     hours: "8.00 - 18.00 Mon-Sat",
   };
+
   return (
-    <>
-      <div className="w-full sm:w-full text-xs border-b py-4">
-        <div className="flex justify-center py-4 mx-auto">
-          <div className="w-3/12 sm:w-1/4">
-            <div className="flex items-center">
-              <div className="w-20 mx-4">
-                <a href="/">
-                  <Image
-                    src="/images/logo.png"
-                    alt="logo"
-                    width={200}
-                    height={200}
-                  />
+    <div className="w-full py-6 bg-white border-b">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between md:items-center gap-6 px-4 items-start">
+        {/* Logo and Business Name */}
+        <div className="flex items-center space-x-4">
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="Laundris Logo"
+              width={80}
+              height={80}
+              className="w-40 h-20"
+            />
+          </Link>
+          <div className="text-center lg:text-left">
+            <p className="text-2xl font-semibold text-blue-700">{data.name}</p>
+            <p className="text-sm text-gray-600">Laundry Center</p>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-8 text-sm font-thin">
+          {/* Address */}
+          <div className="flex items-center space-x-2">
+            <FaMapMarkerAlt className="text-cyan-500 " />
+            <div>
+              <p className="text-sm font-medium">Address</p>
+              <p className="text-gray-600 text-xs">{data.address}</p>
+            </div>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center space-x-2">
+            <FaPhone className="text-cyan-500 " />
+            <div>
+              <p className="text-sm font-medium">Call Us Now</p>
+              <p className="text-blue-600 text-xs">
+                <a href={`tel:${data.phone}`} className="hover:underline">
+                  {data.phone}
                 </a>
-              </div>
-              <div className="w-9/12">
-                <div>
-                  <p className="text-xl font-medium">
-                    <a href="/" className="text-blue-500">
-                      {data.name}
-                    </a>
-                  </p>
-                  <p className="text-xs font-thin">
-                    <a href="/" className="text-gray-700">
-                      Laundry and Dry Cleaning
-                    </a>
-                  </p>
-                </div>
-              </div>
+              </p>
             </div>
           </div>
 
-          <div className="w-4/12 sm:w-1/3 flex justify-center items-center">
-            <div className="flex space-x-2">
-              <div className="flex items-center">
-                <span className="text-xl fa fa-map-marker-alt"></span>
-              </div>
-              <div>
-                <p className="text-sm">Address</p>
-                <p className="text-gray-500">{data.address}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-2/12 sm:w-1/6 flex justify-center items-center">
-            <div className="flex space-x-2">
-              <div className="flex items-center">
-                <span className="text-xl fa fa-phone"></span>
-              </div>
-              <div>
-                <p className="text-sm">Call us now</p>
-                <p className="text-blue-500">
-                  <a href="tel:1234567890">{data.phone}</a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-3/12 sm:w-1/4 flex justify-center items-center">
-            <div className="flex space-x-2">
-              <div className="flex items-center">
-                <span className="text-xl fa fa-clock"></span>
-              </div>
-              <div>
-                <p className="text-sm">Opening Hours</p>
-                <p className="text-gray-500 text-sm">{data.hours}</p>
-              </div>
+          {/* Opening Hours */}
+          <div className="flex items-center space-x-2">
+            <FaClock className="text-cyan-500 " />
+            <div>
+              <p className="text-sm font-medium">Opening Hours</p>
+              <p className="text-gray-600 text-xs">{data.hours}</p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

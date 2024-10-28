@@ -10,12 +10,23 @@ import WhyUs from "@/components/views/whyus";
 export default function Page() {
   return (
     <>
+      {/* Moto (Header) Section */}
       <Moto />
-      <Navbar />
-      <Hero />
-      <Services />
-      <How />
-      <WhyUs />
+
+      {/* Sticky Navbar */}
+      <div className="sticky top-0 z-50 border-b">
+        <Navbar />
+      </div>
+
+      {/* Main Content Sections */}
+      <main className="">
+        <Hero />
+        <Services />
+        <How />
+        <WhyUs />
+      </main>
+
+      {/* Footer */}
       <Footer />
     </>
   );
